@@ -1,16 +1,16 @@
 CARACTERÍSTICAS			    ASYNC/AWAIT (PROMISES)			                  OBSERVABLES
 
-TIPO DE OPERACIÓN		    Asincronía única			                        Asincronía continua o múltiple
+TIPO DE OPERACIÓN		   Asincronía única			                        Asincronía continua o múltiple
 
-VALORES PERMITIDOS		  Solo uno				                              Múltiples a lo largo del tiempo
+VALORES PERMITIDOS		   Solo uno				                        Múltiples a lo largo del tiempo
 
-CANCELACIÓN			        No se pueden cancelar			                    Sí, se puede cancelar con unsubscribe()
+CANCELACIÓN			   No se pueden cancelar			                Sí, se puede cancelar con unsubscribe()
 
-INICIO DE EJECUCIÓN		  Inmediato al crear la promesa		              Solo al hacer subscribe()
+INICIO DE EJECUCIÓN		  Inmediato al crear la promesa		              		Solo al hacer subscribe()
 
-TRANSFORMACIONES		    Limitadas (then, catch)			                  Potentes (map, filter, switchMap,etc)
+TRANSFORMACIONES		  Limitadas (then, catch)			                Potentes (map, filter, switchMap,etc)
 
-MANEJO DE ERRORES		    try/catch				                              catchError, retry,etc
+MANEJO DE ERRORES		  try/catch				                        catchError, retry,etc
 
 
 - async/await:
