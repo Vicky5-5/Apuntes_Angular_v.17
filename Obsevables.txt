@@ -1,0 +1,35 @@
+OBSERVABLES
+
+- Los observables son una herramienta de programación reactiva que permiten manejar datos asíncronos y eventos en tiempo real. Son parte de la librería RxJS, que Angular usa para gestionar flujos de datos.
+
+🧠 Conceptos clave
+Observable: Fuente de datos que puede emitir múltiples valores a lo largo del tiempo.
+
+Observer: El que se suscribe al observable para recibir esos valores.
+
+Suscripción: El vínculo entre el observable y el observer. Se puede cancelar con unsubscribe().
+
+Operadores: Funciones como map, filter, switchMap que permiten transformar o combinar observables.
+
+📦 ¿Dónde se usan en Angular?
+En peticiones HTTP (HttpClient.get() devuelve un observable).
+
+En formularios reactivos (valueChanges es un observable).
+
+En rutas (ActivatedRoute.params es un observable).
+
+En eventos del usuario (como clics o entradas de texto).
+
+this.servicio.getDatos()
+  .subscribe({
+    next: datos => console.log('Datos:', datos),
+    error: err => console.error('Error:', err),
+    complete: () => console.log('Finalizado')
+  });
+
+
+TIPOS DE OBSERVABLES
+
+- Cold: comienzan a emitir cuando alguien se ha suscrito. Ejemplo: HTTPRequests --> unicast --> finitos
+
+- Hot: Emite valores aunque no hayan suscriptores. Ejemplo: Subject, replaySubject, Behaviour Subject --> Eventos de mouse o teclado --> Multicast --> infinitos
