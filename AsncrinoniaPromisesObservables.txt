@@ -1,0 +1,43 @@
+CARACTERÍSTICAS			    ASYNC/AWAIT (PROMISES)			                  OBSERVABLES
+
+TIPO DE OPERACIÓN		    Asincronía única			                        Asincronía continua o múltiple
+
+VALORES PERMITIDOS		  Solo uno				                              Múltiples a lo largo del tiempo
+
+CANCELACIÓN			        No se pueden cancelar			                    Sí, se puede cancelar con unsubscribe()
+
+INICIO DE EJECUCIÓN		  Inmediato al crear la promesa		              Solo al hacer subscribe()
+
+TRANSFORMACIONES		    Limitadas (then, catch)			                  Potentes (map, filter, switchMap,etc)
+
+MANEJO DE ERRORES		    try/catch				                              catchError, retry,etc
+
+
+- async/await:
+
+	- Ideal para tareas puntuales, como cargar datos una sola vez.
+
+	- Más legible para quienes vienen de JavaScript tradicional.
+
+	- Útil en funciones async dentro de componentes o servicios.
+
+⦁	Observables:
+
+	- Perfectos para flujos de datos reactivos, como formularios, eventos, WebSockets.
+
+	- Se integran mejor con Angular (por ejemplo, con el async pipe en plantillas).
+
+	- Permiten composición avanzada con operadores RxJS.
+
+EJEMPLOS:
+
+// Promesa con async/await
+async cargarDatos() {
+  const datos = await this.http.get('/api/info').toPromise();
+  console.log(datos);
+}
+
+// Observable con subscribe
+this.http.get('/api/info').subscribe(datos => {
+  console.log(datos);
+});
